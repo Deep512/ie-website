@@ -1,0 +1,12 @@
+language: python
+python:
+ - "3.7.3"
+
+env:
+ -DJANGO=2.2 DB=mysql
+
+install:
+ - pip3 install -r requirements.txt
+
+script:
+ - python3 manage.py test
