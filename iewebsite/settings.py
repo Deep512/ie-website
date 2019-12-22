@@ -25,7 +25,7 @@ RECAPTCHA_PUBLIC_KEY= constants.PUBLIC_KEY
 RECAPTCHA_PRIVATE_KEY= constants.PRIVATE_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # DEBUG = True	#for localhost
 
@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'alumni.apps.AlumniConfig',
     'webadmin.apps.WebadminConfig',
     'accounts.apps.AccountsConfig',
-    'captcha'
 ]
 
 MIDDLEWARE = [
@@ -83,18 +82,18 @@ WSGI_APPLICATION = 'iewebsite.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'iewebsite',
-        'USER': 'iewebsite',
-        'PASSWORD': 'mnsm',
-        'HOST': 'localhost',
-        'PORT': '',
-        }
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
+     #'default': {
+     #  'ENGINE': 'django.db.backends.postgresql_psycopg2',
+     #  'NAME': 'iewebsite',
+     #  'USER': 'iewebsite',
+     #  'PASSWORD': 'mnsm',
+     #  'HOST': 'localhost',
+     #  'PORT': '',
+     #   }
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
 }
 
 # Password validation
